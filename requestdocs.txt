@@ -1,0 +1,16 @@
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open("GET", "https://yh-finance.p.rapidapi.com/auto-complete?q=Amazon&region=US");
+xhr.setRequestHeader("x-rapidapi-host", "yh-finance.p.rapidapi.com");
+xhr.setRequestHeader("x-rapidapi-key", "49c46098e1msh2a7a241f6a564e5p183d9fjsn98e28a8d996a");
+
+xhr.send(data);
